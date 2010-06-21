@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/list_lights" android:title="Lights" />
-    <item android:id="@+id/list_cortex" android:title="Cpu info" />
+    <item android:id="@+id/list_lights" android:titleCondensed="Lights" android:icon="@drawable/icon48"/>
+    <item android:id="@+id/list_cortex" android:titleCondensed="Cpu" android:icon="@drawable/icon48"/>
+    <item android:id="@+id/setup" android:titleCondensed="Setup" android:icon="@drawable/icon48" />
 </menu>
