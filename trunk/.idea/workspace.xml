@@ -17,7 +17,18 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="b3fc2349-4845-4431-bd1f-0fb4c5cd2618" name="Default" comment="" />
+    <list default="true" readonly="true" id="b3fc2349-4845-4431-bd1f-0fb4c5cd2618" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/guyvo/Light.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/setup.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/main.xml" afterPath="$PROJECT_DIR$/res/menu/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/guyvo/Setup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/android/guyvo/R.java" afterPath="$PROJECT_DIR$/gen/com/android/guyvo/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/guyvo/Cortex.java" />
+    </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,10 +87,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="7" selection-start="625" selection-end="625" vertical-scroll-proportion="0.41438848">
+            <state line="25" column="17" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,82 +98,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="com.android.guyvo.MainActivity" pinned="false" current="false" current-in-tab="false">
-        <entry file="uml://com.android.guyvo.MainActivity">
-          <provider selected="true" editor-type-id="UmlClassDiagramEditorProvider">
-            <state>
-              <classes>
-                <class fqn="android.view.KeyEvent.Callback" x="338.0" y="228.0" />
-                <class fqn="java.lang.Object" x="171.5" y="0.0" />
-                <class fqn="com.android.guyvo.MainActivity" x="407.25" y="390.0" />
-                <class fqn="android.content.ComponentCallbacks" x="461.0" y="228.0" />
-                <class fqn="android.view.View.OnCreateContextMenuListener" x="792.0" y="228.0" />
-                <class fqn="android.view.LayoutInflater.Factory" x="0.0" y="228.0" />
-                <class fqn="android.app.Activity" x="423.75" y="314.0" />
-                <class fqn="android.content.ContextWrapper" x="138.5" y="152.0" />
-                <class fqn="android.content.Context" x="167.5" y="76.0" />
-                <class fqn="android.view.Window.Callback" x="669.0" y="228.0" />
-                <class fqn="android.view.ContextThemeWrapper" x="115.0" y="228.0" />
-              </classes>
-              <packages />
-              <edges>
-                <edge source="android.app.Activity" target="android.view.View.OnCreateContextMenuListener" relationship="REALIZATION">
-                  <point x="40.41666666666663" y="-13.0" />
-                  <point x="512.6666666666666" y="294.0" />
-                  <point x="919.5" y="294.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="android.view.ContextThemeWrapper" target="android.content.ContextWrapper" relationship="GENERALIZATION">
-                  <point x="0.0" y="-13.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="android.content.Context" target="java.lang.Object" relationship="GENERALIZATION">
-                  <point x="0.0" y="-13.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="android.app.Activity" target="android.content.ComponentCallbacks" relationship="REALIZATION">
-                  <point x="8.083333333333314" y="-13.0" />
-                  <point x="480.3333333333333" y="274.0" />
-                  <point x="555.0" y="274.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="com.android.guyvo.MainActivity" target="android.app.Activity" relationship="GENERALIZATION">
-                  <point x="0.0" y="-13.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="android.app.Activity" target="android.view.Window.Callback" relationship="REALIZATION">
-                  <point x="24.25" y="-13.0" />
-                  <point x="496.5" y="284.0" />
-                  <point x="720.5" y="284.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="android.app.Activity" target="android.view.LayoutInflater.Factory" relationship="REALIZATION">
-                  <point x="-40.416666666666686" y="-13.0" />
-                  <point x="431.8333333333333" y="294.0" />
-                  <point x="47.5" y="294.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="android.content.ContextWrapper" target="android.content.Context" relationship="GENERALIZATION">
-                  <point x="0.0" y="-13.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="android.app.Activity" target="android.view.KeyEvent.Callback" relationship="REALIZATION">
-                  <point x="-8.083333333333314" y="-13.0" />
-                  <point x="464.1666666666667" y="274.0" />
-                  <point x="389.5" y="274.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="android.app.Activity" target="android.view.ContextThemeWrapper" relationship="GENERALIZATION">
-                  <point x="-24.25" y="-13.0" />
-                  <point x="448.0" y="284.0" />
-                  <point x="216.5" y="284.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-              </edges>
-              <settings isCamel="false" isColorManagerEnabled="true" isFieldsVisible="false" isConstructorsVisible="false" isMethodsVisible="false" isShowDependencies="false" isShowInnerClasses="false" isVcsFilterEnabled="false" defaultVisibility="all" layout="Hierarchic Group" isPropertiesVisible="false" zoom="0.6804123711340206" x="342.7272727272727" y="53.68181818181819" />
-              <SelectedNodes>
-                <node fqn="com.android.guyvo.MainActivity" />
-              </SelectedNodes>
+      <file leaf-file-name="R.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen/com/android/guyvo/R.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="19" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/setup.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Setup.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Setup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="37" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Light.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Light.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="29" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cortex.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Cortex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="9" selection-start="763" selection-end="1228" vertical-scroll-proportion="0.5162524">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,7 +159,7 @@
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="3" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
+            <state line="3" column="8" selection-start="39" selection-end="231" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -188,9 +168,16 @@
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+            <state line="3" column="102" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icon.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable/icon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -206,8 +193,12 @@
       <list>
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/res/layout/setup.xml" />
         <option value="$PROJECT_DIR$/res/menu/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/android/guyvo/Light.java" />
         <option value="$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/android/guyvo/Cortex.java" />
+        <option value="$PROJECT_DIR$/src/com/android/guyvo/Setup.java" />
       </list>
     </option>
   </component>
@@ -248,7 +239,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -281,28 +272,142 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guyvo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domotica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domotica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domotica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domotica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domotica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domotica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domotica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domotica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guyvo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="148" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="104" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="35" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="124" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="104" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="129" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="99" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="898" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="99" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="918" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
   </component>
   <component name="RunManager" selected="Android Application.Domotica">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="CHOOSE_DEVICE_MANUALLY" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -315,7 +420,41 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit">
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" class_name="" html_or_swf_file_path="" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" port="0" run_mode="HtmlOrSwfFile" scope="Class" socket_policy_port="0" url_to_launch="http://">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" />
+      <extension name="snapshooter" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -459,38 +598,61 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/.idea" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="b3fc2349-4845-4431-bd1f-0fb4c5cd2618" name="Default" comment="" />
       <created>1276789812983</created>
       <updated>1276789812983</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="171" y="104" width="1406" height="1239" extended-state="0" />
+    <frame x="-301" y="183" width="1743" height="1215" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291592" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45876288" sideWeight="0.6648794" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32886505" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36729223" sideWeight="0.99632084" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37249115" sideWeight="0.6657534" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278539" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36729223" sideWeight="0.99632084" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -528,35 +690,28 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://com.android.guyvo.MainActivity">
       <provider selected="true" editor-type-id="UmlClassDiagramEditorProvider">
         <state>
           <classes>
-            <class fqn="android.view.KeyEvent.Callback" x="338.0" y="228.0" />
-            <class fqn="java.lang.Object" x="171.5" y="0.0" />
-            <class fqn="com.android.guyvo.MainActivity" x="407.25" y="390.0" />
-            <class fqn="android.content.ComponentCallbacks" x="461.0" y="228.0" />
-            <class fqn="android.view.View.OnCreateContextMenuListener" x="792.0" y="228.0" />
-            <class fqn="android.view.LayoutInflater.Factory" x="0.0" y="228.0" />
-            <class fqn="android.app.Activity" x="423.75" y="314.0" />
-            <class fqn="android.content.ContextWrapper" x="138.5" y="152.0" />
-            <class fqn="android.content.Context" x="167.5" y="76.0" />
-            <class fqn="android.view.Window.Callback" x="669.0" y="228.0" />
-            <class fqn="android.view.ContextThemeWrapper" x="115.0" y="228.0" />
+            <class fqn="android.view.View.OnCreateContextMenuListener" x="346.0" y="228.0" />
+            <class fqn="com.android.guyvo.MainActivity" x="529.25" y="390.0" />
+            <class fqn="android.view.KeyEvent.Callback" x="943.9999999999999" y="228.0" />
+            <class fqn="android.view.LayoutInflater.Factory" x="829.0" y="228.0" />
+            <class fqn="android.view.ContextThemeWrapper" x="0.0" y="228.0" />
+            <class fqn="java.lang.Object" x="56.5" y="0.0" />
+            <class fqn="android.app.Activity" x="545.75" y="314.0" />
+            <class fqn="android.content.Context" x="52.5" y="76.0" />
+            <class fqn="android.view.Window.Callback" x="222.99999999999997" y="228.0" />
+            <class fqn="android.content.ComponentCallbacks" x="621.0" y="228.0" />
+            <class fqn="android.content.ContextWrapper" x="23.5" y="152.0" />
           </classes>
           <packages />
           <edges>
             <edge source="android.app.Activity" target="android.view.View.OnCreateContextMenuListener" relationship="REALIZATION">
-              <point x="40.41666666666663" y="-13.0" />
-              <point x="512.6666666666666" y="294.0" />
-              <point x="919.5" y="294.0" />
+              <point x="-8.083333333333371" y="-13.0" />
+              <point x="586.1666666666666" y="274.0" />
+              <point x="473.5" y="274.0" />
               <point x="0.0" y="13.0" />
             </edge>
             <edge source="android.view.ContextThemeWrapper" target="android.content.ContextWrapper" relationship="GENERALIZATION">
@@ -568,9 +723,9 @@
               <point x="0.0" y="13.0" />
             </edge>
             <edge source="android.app.Activity" target="android.content.ComponentCallbacks" relationship="REALIZATION">
-              <point x="8.083333333333314" y="-13.0" />
-              <point x="480.3333333333333" y="274.0" />
-              <point x="555.0" y="274.0" />
+              <point x="8.083333333333371" y="-13.0" />
+              <point x="602.3333333333334" y="274.0" />
+              <point x="715.0" y="274.0" />
               <point x="0.0" y="13.0" />
             </edge>
             <edge source="com.android.guyvo.MainActivity" target="android.app.Activity" relationship="GENERALIZATION">
@@ -578,15 +733,15 @@
               <point x="0.0" y="13.0" />
             </edge>
             <edge source="android.app.Activity" target="android.view.Window.Callback" relationship="REALIZATION">
-              <point x="24.25" y="-13.0" />
-              <point x="496.5" y="284.0" />
-              <point x="720.5" y="284.0" />
+              <point x="-24.25" y="-13.0" />
+              <point x="570.0" y="284.0" />
+              <point x="274.5" y="284.0" />
               <point x="0.0" y="13.0" />
             </edge>
             <edge source="android.app.Activity" target="android.view.LayoutInflater.Factory" relationship="REALIZATION">
-              <point x="-40.416666666666686" y="-13.0" />
-              <point x="431.8333333333333" y="294.0" />
-              <point x="47.5" y="294.0" />
+              <point x="24.25" y="-13.0" />
+              <point x="618.5" y="284.0" />
+              <point x="876.5" y="284.0" />
               <point x="0.0" y="13.0" />
             </edge>
             <edge source="android.content.ContextWrapper" target="android.content.Context" relationship="GENERALIZATION">
@@ -594,42 +749,85 @@
               <point x="0.0" y="13.0" />
             </edge>
             <edge source="android.app.Activity" target="android.view.KeyEvent.Callback" relationship="REALIZATION">
-              <point x="-8.083333333333314" y="-13.0" />
-              <point x="464.1666666666667" y="274.0" />
-              <point x="389.5" y="274.0" />
+              <point x="40.41666666666663" y="-13.0" />
+              <point x="634.6666666666666" y="294.0" />
+              <point x="995.4999999999999" y="294.0" />
               <point x="0.0" y="13.0" />
             </edge>
             <edge source="android.app.Activity" target="android.view.ContextThemeWrapper" relationship="GENERALIZATION">
-              <point x="-24.25" y="-13.0" />
-              <point x="448.0" y="284.0" />
-              <point x="216.5" y="284.0" />
+              <point x="-40.41666666666663" y="-13.0" />
+              <point x="553.8333333333334" y="294.0" />
+              <point x="101.5" y="294.0" />
               <point x="0.0" y="13.0" />
             </edge>
           </edges>
-          <settings isCamel="false" isColorManagerEnabled="true" isFieldsVisible="false" isConstructorsVisible="false" isMethodsVisible="false" isShowDependencies="false" isShowInnerClasses="false" isVcsFilterEnabled="false" defaultVisibility="all" layout="Hierarchic Group" isPropertiesVisible="false" zoom="0.6804123711340206" x="342.7272727272727" y="53.68181818181819" />
+          <settings isCamel="false" isColorManagerEnabled="true" isFieldsVisible="false" isConstructorsVisible="false" isMethodsVisible="false" isShowDependencies="false" isShowInnerClasses="false" isVcsFilterEnabled="false" defaultVisibility="all" layout="Hierarchic Group" isPropertiesVisible="false" zoom="0.4498594189315839" x="787.0" y="418.0" />
           <SelectedNodes>
             <node fqn="com.android.guyvo.MainActivity" />
           </SelectedNodes>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+    <entry file="file://$PROJECT_DIR$/gen/com/android/guyvo/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="3" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="19" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/setup.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+        <state line="11" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="36" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="8" selection-start="39" selection-end="231" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Light.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="29" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="7" selection-start="625" selection-end="625" vertical-scroll-proportion="0.41438848">
+        <state line="25" column="17" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="102" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Setup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="37" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Cortex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="9" selection-start="763" selection-end="1228" vertical-scroll-proportion="0.5162524">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
