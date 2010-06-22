@@ -10,4 +10,5 @@
         </activity>
         <activity android:name=".Setup" android:label="Setup"/>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
