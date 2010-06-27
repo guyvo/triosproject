@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.*;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.apache.http.Header;
@@ -24,6 +25,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -33,48 +35,13 @@ import java.util.List;
  * Time: 5:50:57 PM
  * To change this template use File | Settings | File Templates.
  */
-public class MainActivity extends Activity {
-    TextView textView;
+public class MainActivity extends Activity implements TriosLightChangeListener,TriosCortexChangeListener{
+    private TextView textView;
+    private EditText nameUrl;
+
     public static List<Light> listLights = new ArrayList<Light>();
     public static List<Cortex> listCortexes = new ArrayList<Cortex>();
-
-	public static String toText (InputStream in) throws IOException {
-	    StringBuffer out = new StringBuffer();
-	    byte[] b = new byte[4096];
-	    for (int n; (n = in.read(b)) != -1;) {
-	        out.append(new String(b, 0, n));
-	    }
-	    return out.toString();
-	}
-
-	public static InputStream getInputStreamFromUrl(String url, Context ctx) {
-		InputStream content = null;
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-    
-
-		try {
-			HttpGet httpGet = new HttpGet(url);
- 			httpGet.addHeader("cortex", "4");
-			HttpClient httpclient = new DefaultHttpClient();
-			HttpResponse response = httpclient.execute(httpGet);
-			content = response.getEntity().getContent();
-            String text = toText(content);
-            out.write(text.getBytes());
-            HttpPost httpPost = new HttpPost(url);
-            StringEntity stringEntity = new StringEntity(text);
-            stringEntity.setContentType("text/xml");
-            httpPost.setEntity(stringEntity);
-            httpPost.addHeader("cortex", "4");
-            response = httpclient.execute(httpPost);
-            Toast.makeText(ctx, response.getLastHeader("status").getValue(), Toast.LENGTH_SHORT ).show();
-		} catch (Exception e) {
-			// handle the exception !
-			Toast.makeText(ctx, e.getMessage(), Toast.LENGTH_LONG ).show();
-			Log.e("GUYVO",e.getMessage());
-		}
-
-		return content;
-	}
+    public static TriosXmlFeed triosXmlFeed;
 
     @Override
     public Object onRetainNonConfigurationInstance() {
@@ -84,39 +51,34 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onStart() {
-		// TODO Auto-generated method stub
-		byte[] b = new byte[4096];
-		int len;
-
 		super.onStart();
 
 		try {
-			InputStream inputStream = getInputStreamFromUrl("http://guyvo.no-ip.biz:60000/",this);
-			/*if (inputStream !=null){
-				//len = inputStream.read(b, 0, 3241);
-				//text.setText(toText(inputStream));
-				XmlParser xml = new XmlParser(inputStream);
-				xml.addXmlParseListener(this);
-				xml.Parse();
-			}*/
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG );
-			Log.e("GUYVO",e.getMessage());
-		}
 
+            triosXmlFeed.getXml();
+		} catch (Exception e) {
+			Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG ).show();
+		}
 	}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        nameUrl = (EditText)findViewById(R.id.urlname);
+        nameUrl.setText(R.string.defaulturl);
+        try {
+            triosXmlFeed = new TriosXmlFeed(nameUrl.getText().toString());
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        triosXmlFeed.addTriosCortesChangeListener(this);
+        triosXmlFeed.addTriosLightChangeListener(this);
+
 
         final List<Light> data = (List<Light>) getLastNonConfigurationInstance();
         if ( data == null){
-            //TODO add http get parse xml here
-            Light light = new Light("", "", "");
-            listLights.add(light);
+
         }
     }
 
@@ -127,5 +89,46 @@ public class MainActivity extends Activity {
         MenuItem menuItem = menu.getItem(2);
         menuItem.setIntent(new Intent(this, Setup.class));
         return true;
+    }
+
+    public void onLightChange(LightChangeEvent e) {
+        boolean found = false;
+        Iterator it = listLights.listIterator();
+
+        while (it.hasNext()){
+            Light light = (Light) it.next();
+            if (
+                 (light.getCortexId().compareTo(e.getLight().getCortexId()) == 0) &&
+                 (light.getLightId().compareTo(e.getLight().getLightId()) == 0)
+               ){
+                listLights.remove(light);
+                listLights.add(e.getLight());
+                found = true;
+                break;
+            }
+        }
+
+        if (! found){
+             listLights.add(e.getLight());
+        }
+     }
+
+    public void onCortexChange(CortexChangeEvent e) {
+        boolean found = false;
+        Iterator it = listCortexes.iterator();
+
+        while (it.hasNext()){
+            Cortex cortex = (Cortex) it.next();
+            if ( cortex.getName().compareTo(e.getCortex().getName()) == 0 ){
+                listCortexes.remove(cortex);
+                listCortexes.add(e.getCortex());
+                found = true;
+                break;
+            }
+        }
+
+        if (! found){
+            listCortexes.add(e.getCortex());
+        }
     }
 }

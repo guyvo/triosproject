@@ -7,7 +7,7 @@ package com.android.guyvo;
  * Time: 8:52:57 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Light {
+public class Light{
     private String name;
     private String cortexId;
     private String lightId;
@@ -94,6 +94,11 @@ public class Light {
 
     public Light(String name, String cortexId, String lightId) {
         this.name = name;
+        this.cortexId = cortexId;
+        this.lightId = lightId;
+    }
+
+    public Light(String cortexId, String lightId) {
         this.cortexId = cortexId;
         this.lightId = lightId;
     }
