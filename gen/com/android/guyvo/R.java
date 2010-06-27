@@ -15,10 +15,11 @@ public final class R {
         public static final int icon48=0x7f020001;
     }
     public static final class id {
-        public static final int ipadress=0x7f060000;
-        public static final int list_cortex=0x7f060002;
-        public static final int list_lights=0x7f060001;
-        public static final int setup=0x7f060003;
+        public static final int ipadress=0x7f060001;
+        public static final int list_cortex=0x7f060003;
+        public static final int list_lights=0x7f060002;
+        public static final int setup=0x7f060004;
+        public static final int urlname=0x7f060000;
     }
     public static final class layout {
         public static final int main=0x7f030000;
@@ -28,7 +29,15 @@ public final class R {
         public static final int main=0x7f050000;
     }
     public static final class string {
+        public static final int CORTEX=0x7f040004;
+        public static final int DIMMER=0x7f040008;
+        public static final int MASK=0x7f040009;
+        public static final int SENSOR=0x7f040005;
+        public static final int TOGGLE=0x7f040007;
+        public static final int WATCHDOG=0x7f040006;
         public static final int app_name=0x7f040001;
+        public static final int defaulturl=0x7f040003;
         public static final int hello=0x7f040000;
+        public static final int maintitle=0x7f040002;
     }
 }
