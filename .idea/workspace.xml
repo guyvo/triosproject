@@ -3,9 +3,6 @@
   <component name="AnalysisUIOptions">
     <option name="SCOPE_TYPE" value="3" />
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="GUYVO" />
-  </component>
   <component name="CCaseConfig">
     <option name="checkoutReserved" value="false" />
     <option name="markExternalChangeAsUpToDate" value="true" />
@@ -20,7 +17,22 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="b3fc2349-4845-4431-bd1f-0fb4c5cd2618" name="Default" comment="" />
+    <list default="true" readonly="true" id="b3fc2349-4845-4431-bd1f-0fb4c5cd2618" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/cortexlist.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/listlights.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/lightlist_value.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/android/guyvo/Setup.java" afterPath="$PROJECT_DIR$/src/com/android/guyvo/SetupActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/guyvo/CortexList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/guyvo/CortexSensorComparator.java" afterPath="$PROJECT_DIR$/src/com/android/guyvo/CortexSensorComparator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/guyvo/Light.java" afterPath="$PROJECT_DIR$/src/com/android/guyvo/Light.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/android/guyvo/R.java" afterPath="$PROJECT_DIR$/gen/com/android/guyvo/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/guyvo/TriosModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/guyvo/LightValueComparator.java" />
+    </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,48 +91,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TriosXmlFeed.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/TriosXmlFeed.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="0" selection-start="4724" selection-end="4724" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TriosLightChangeListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/TriosLightChangeListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="17" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XmlParseListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/XmlParseListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="17" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XmlParseChangeEvent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/XmlParseChangeEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="44" selection-start="233" selection-end="266" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="55" selection-start="1392" selection-end="1392" vertical-scroll-proportion="0.0">
+            <state line="90" column="15" selection-start="2294" selection-end="2702" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,13 +102,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cortex.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Cortex.java">
+      <file leaf-file-name="listlights.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/listlights.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+            <state line="4" column="42" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="20" selection-start="106" selection-end="211" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CortexList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/CortexList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="1150" selection-end="1150" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cortexlist.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/cortexlist.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="36" selection-start="533" selection-end="533" vertical-scroll-proportion="0.23529412">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lightlist_value.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/lightlist_value.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="20" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,7 +152,16 @@
       <file leaf-file-name="Light.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Light.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+            <state line="11" column="13" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TriosModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/TriosModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="53" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,27 +170,16 @@
       <file leaf-file-name="CortexSensorComparator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/CortexSensorComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
+            <state line="13" column="79" selection-start="346" selection-end="441" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Setup.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Setup.java">
+      <file leaf-file-name="LightValueComparator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/LightValueComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="407" selection-end="407" vertical-scroll-proportion="0.2967033">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XmlParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/XmlParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
+            <state line="15" column="93" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -187,22 +195,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/android/guyvo/CortexSensorComparator.java" />
-        <option value="$PROJECT_DIR$/src/com/android/guyvo/Setup.java" />
-        <option value="$PROJECT_DIR$/src/com/android/guyvo/Cortex.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/android/guyvo/CortexDimmerChangeEvent.java" />
-        <option value="$PROJECT_DIR$/src/com/android/guyvo/TriosCortexChangeListener.java" />
-        <option value="$PROJECT_DIR$/src/com/android/guyvo/LightDeltaChangeEvent.java" />
-        <option value="$PROJECT_DIR$/src/com/android/guyvo/TriosLightChangeListener.java" />
-        <option value="$PROJECT_DIR$/src/com/android/guyvo/LightChangeEvent.java" />
         <option value="$PROJECT_DIR$/src/com/android/guyvo/CortexChangeEvent.java" />
-        <option value="$PROJECT_DIR$/src/com/android/guyvo/Light.java" />
         <option value="$PROJECT_DIR$/src/com/android/guyvo/XmlParser.java" />
         <option value="$PROJECT_DIR$/src/com/android/guyvo/TriosXmlFeed.java" />
+        <option value="$PROJECT_DIR$/src/com/android/guyvo/Light.java" />
+        <option value="$PROJECT_DIR$/src/com/android/guyvo/CortexSensorComparator.java" />
+        <option value="$PROJECT_DIR$/src/com/android/guyvo/Setup.java" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/res/layout/cortexlist_item.xml" />
         <option value="$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/cortexlistitem.xml" />
+        <option value="$PROJECT_DIR$/src/com/android/guyvo/LightValueComparator.java" />
+        <option value="$PROJECT_DIR$/src/com/android/guyvo/TriosModel.java" />
+        <option value="$PROJECT_DIR$/res/menu/listlights.xml" />
+        <option value="$PROJECT_DIR$/src/com/android/guyvo/CortexList.java" />
+        <option value="$PROJECT_DIR$/res/layout/lightlist_value.xml" />
+        <option value="$PROJECT_DIR$/res/layout/cortexlist.xml" />
       </list>
     </option>
   </component>
@@ -251,6 +259,7 @@
     </navigator>
     <panes>
       <pane id="Favorites" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,6 +331,10 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -379,7 +392,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -387,16 +399,16 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="148" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="104" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="35" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="124" />
-    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="104" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="129" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="99" />
@@ -414,8 +426,8 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Android Application.Domotica">
@@ -664,12 +676,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="45" y="75" width="1883" height="1265" extended-state="0" />
-    <editor active="false" />
+    <frame x="52" y="111" width="1883" height="1265" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3146853" sideWeight="0.99945474" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3146853" sideWeight="0.99945474" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925764" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32255244" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -680,9 +692,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3440567" sideWeight="0.6791958" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3440567" sideWeight="0.66695803" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32692307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36625874" sideWeight="0.99632084" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -760,123 +772,117 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../Downloads/android-sdk-mac_86/platforms/android-7/android.jar!/android/app/Instrumentation.class">
+    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/SetupActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="16" selection-start="6406" selection-end="6406" vertical-scroll-proportion="-9.416667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../Downloads/android-sdk-mac_86/platforms/android-7/android.jar!/android/app/Activity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="16" selection-start="11653" selection-end="11653" vertical-scroll-proportion="0.34411764">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/LightChangeEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/CortexChangeEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../Downloads/android-sdk-mac_86/platforms/android-7/android.jar!/android/util/Xml.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="47" selection-start="856" selection-end="856" vertical-scroll-proportion="0.2857143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/TriosCortexChangeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/TriosLightChangeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/XmlParseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/XmlParseChangeEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="44" selection-start="233" selection-end="266" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/XmlParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
+        <state line="24" column="0" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Downloads/android-sdk-mac_86/platforms/android-7/android.jar!/android/app/Instrumentation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="16" selection-start="6174" selection-end="6174" vertical-scroll-proportion="-9.416667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/TriosXmlFeed.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="0" selection-start="4724" selection-end="4724" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="9" column="8" selection-start="232" selection-end="424" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/gen/com/android/guyvo/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="55" selection-start="1392" selection-end="1392" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="27" column="32" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Cortex.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Light.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+        <state line="11" column="13" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/CortexSensorComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
+        <state line="13" column="79" selection-start="346" selection-end="441" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/Setup.java">
+    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/LightValueComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="407" selection-end="407" vertical-scroll-proportion="0.2967033">
+        <state line="15" column="93" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/TriosModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="53" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="15" selection-start="2294" selection-end="2702" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="20" selection-start="106" selection-end="211" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/guyvo/CortexList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1150" selection-end="1150" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/lightlist_value.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="20" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/listlights.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="42" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/cortexlist.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="36" selection-start="533" selection-end="533" vertical-scroll-proportion="0.23529412">
+          <folding />
         </state>
       </provider>
     </entry>
