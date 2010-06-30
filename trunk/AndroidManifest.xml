@@ -8,7 +8,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Setup" android:label="Setup"/>
+        <activity android:name=".SetupActivity" android:label="Setup"/>
+        <activity android:name=".CortexList"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

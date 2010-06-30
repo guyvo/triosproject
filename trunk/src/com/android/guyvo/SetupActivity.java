@@ -7,7 +7,6 @@ import java.util.Comparator;
 
 import com.android.guyvo.Cortex;
 
-import static com.android.guyvo.MainActivity.listCortexes;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,12 +15,10 @@ import static com.android.guyvo.MainActivity.listCortexes;
  * Time: 1:40:51 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Setup extends Activity {
+public class SetupActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Comparator<Cortex> sensorCompare = new CortexSensorComparator();
-        Collections.sort(listCortexes,sensorCompare);
 
     }
 }

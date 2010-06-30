@@ -1,5 +1,7 @@
 package com.android.guyvo;
 
+import java.util.Comparator;
+
 /**
  * Created by IntelliJ IDEA.
  * User: guy
@@ -7,7 +9,7 @@ package com.android.guyvo;
  * Time: 8:52:57 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Light{
+public class Light {
     private String name;
     private String cortexId;
     private String lightId;

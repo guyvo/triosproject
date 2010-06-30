@@ -11,6 +11,7 @@ import java.util.Comparator;
  */
 public class CortexSensorComparator implements Comparator<Cortex>{
     public int compare(Cortex cortex, Cortex cortex1) {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+        return ( Integer.valueOf(cortex.getSensor()).compareTo(Integer.valueOf(cortex1.getSensor())));
+
     }
 }
