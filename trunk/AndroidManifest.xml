@@ -10,6 +10,8 @@
         </activity>
         <activity android:name=".SetupActivity" android:label="Setup"/>
         <activity android:name=".CortexList"/>
+        <activity android:name=".LightViewActivity"/>
+        <activity android:name=".SliderTest"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

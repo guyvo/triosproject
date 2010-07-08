@@ -44,6 +44,10 @@ public class TriosModel implements TriosLightChangeListener,TriosCortexChangeLis
         Collections.sort(listLights,valueComparator);
     }
 
+    public void sortOnCortexSensor(){
+        Collections.sort(listCortexes,sensorCompare);
+    }
+
     public void setListCortexes(List<Cortex> listCortexes) {
         this.listCortexes = listCortexes;
     }

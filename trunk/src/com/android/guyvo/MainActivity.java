@@ -63,10 +63,10 @@ public class MainActivity extends Activity implements Runnable {
         try {
             final TriosModel data = (TriosModel) getLastNonConfigurationInstance();
             if (data == null) {
-                Thread t = new Thread(this);
-                t.setName("IOthread");
-                t.start();
-                m_ProgressDialog = ProgressDialog.show(MainActivity.this,"Please wait...", "Retrieving data ...", true);
+                //Thread t = new Thread(this);
+                //t.setName("IOthread");
+                //t.start();
+                //m_ProgressDialog = ProgressDialog.show(MainActivity.this,"Please wait...", "Retrieving data ...", true);
             }
             else{
 
@@ -74,8 +74,6 @@ public class MainActivity extends Activity implements Runnable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
     @Override
@@ -91,7 +89,9 @@ public class MainActivity extends Activity implements Runnable {
         MenuItem menuItem = menu.getItem(2);
         menuItem.setIntent(new Intent(this, SetupActivity.class));
         menuItem = menu.getItem(0);
-        menuItem.setIntent(new Intent(this, CortexList.class));
+        menuItem.setIntent(new Intent(this, LightViewActivity.class));
+        menuItem = menu.getItem(1);
+        menuItem.setIntent(new Intent(this, SliderTest.class));
         return true;
     }
 

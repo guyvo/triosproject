@@ -52,6 +52,7 @@ public class TriosXmlFeed implements XmlParseListener {
 
 
         HttpGet httpGet = new HttpGet(url);
+       
         httpGet.addHeader("cortex", "4");
         HttpClient httpclient = new DefaultHttpClient();
         HttpResponse response = httpclient.execute(httpGet);
