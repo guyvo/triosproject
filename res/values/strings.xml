@@ -3,7 +3,7 @@
     <string name="hello">Hello World</string>
     <string name="app_name"></string>
     <string name="maintitle">Trios light view</string>
-    <string name="defaulturl">http://guyvo.no-ip.biz:60000/</string>
+    <string name="defaulturl">http://192.168.1.22:60000/</string>
 
     <string name="CORTEX">CORTEX</string>
     <string name="SENSOR">SENSOR</string>
