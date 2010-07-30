@@ -2,10 +2,6 @@ package com.android.guyvo;
 
 import android.app.Activity;
 import android.os.Bundle;
-import java.util.Collections;
-import java.util.Comparator;
-
-import com.android.guyvo.Cortex;
 
 
 /**

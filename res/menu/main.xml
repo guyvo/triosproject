@@ -4,4 +4,5 @@
     <item android:id="@+id/list_lights" android:titleCondensed="Lights" android:icon="@drawable/icon48"/>
     <item android:id="@+id/list_cortex" android:titleCondensed="Cpu" android:icon="@drawable/icon48"/>
     <item android:id="@+id/setup" android:titleCondensed="Setup" android:icon="@drawable/icon48" />
+    <item android:id="@+id/Programs" android:titleCondensed="PreSets" android:icon="@drawable/icon48" />
 </menu>

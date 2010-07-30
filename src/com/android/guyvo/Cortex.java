@@ -1,9 +1,5 @@
 package com.android.guyvo;
 
-import com.sun.org.apache.xpath.internal.operations.Equals;
-
-import java.util.Comparator;
-
 /**
  * Created by IntelliJ IDEA.
  * User: guy
@@ -23,6 +19,27 @@ public class Cortex {
     private String hours;
     private String masks;
 
+    private StringBuilder xml = new  StringBuilder();
+
+    public String toXml(){
+        xml.append("<Cortex CORTEX=\"");
+        xml.append(name + "\"");
+        xml.append(" SENSOR=\"");
+        xml.append(sensor + "\"");
+        xml.append(" WATCHDOG=\"");
+        xml.append(watchdog + "\"");
+        xml.append(" TOGGLE=\"");
+        xml.append(toggle + "\"");
+        xml.append(" DIMMER=\"");
+        xml.append(dimmer + "\"");
+        xml.append(" HOURS=\"");
+        xml.append(hours + "\"");
+        xml.append(" MASKS=\"");
+        xml.append(masks + "\"");
+        xml.append(">\n");
+
+        return xml.toString();
+    }
 
     public String getName() {
         return name;

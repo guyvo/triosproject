@@ -12,6 +12,8 @@
         <activity android:name=".CortexList"/>
         <activity android:name=".LightViewActivity"/>
         <activity android:name=".SliderTest"/>
+        <activity android:name=".TriosXmlTextView"/>
+        <activity android:name=".TriosListPrograms"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

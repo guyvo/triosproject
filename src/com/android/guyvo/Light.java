@@ -1,7 +1,5 @@
 package com.android.guyvo;
 
-import java.util.Comparator;
-
 /**
  * Created by IntelliJ IDEA.
  * User: guy
@@ -21,6 +19,28 @@ public class Light {
     private String pinout;
     private String step;
 
+    private StringBuilder xml = new  StringBuilder();
+
+
+    public String toXml(){
+        xml.append("<Light NAME=\"");
+        xml.append(lightId + "\"");
+        xml.append(" VALUE=\"");
+        xml.append(value + "\"");
+        xml.append(" MIN=\"");
+        xml.append(min + "\"");
+        xml.append(" MAX=\"");
+        xml.append(max + "\"");
+        xml.append(" DELTA=\"");
+        xml.append(step + "\"");
+        xml.append(" PININ=\"");
+        xml.append(pinin + "\"");
+        xml.append(" PINOUT=\"");
+        xml.append(pinout + "\"");
+        xml.append("/>\n");
+
+        return xml.toString();
+    }
 
     public String getName() {
         return name;

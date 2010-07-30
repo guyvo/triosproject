@@ -9,7 +9,7 @@ import java.util.EventListener;
  * Time: 4:06:37 PM
  * To change this template use File | Settings | File Templates.
  */
-public interface TriosCortexChangeListener extends EventListener{
-    public abstract void onCortexChange ( CortexChangeEvent e);
+public interface TriosCortexChangeListener extends EventListener {
+    public abstract void onCortexChange(CortexChangeEvent e);
 
 }

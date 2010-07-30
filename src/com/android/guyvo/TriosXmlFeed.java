@@ -1,10 +1,5 @@
 package com.android.guyvo;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.EventObject;
-import java.util.Vector;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -12,6 +7,10 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.xmlpull.v1.XmlPullParser;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Vector;
 
 public class TriosXmlFeed implements XmlParseListener {
 
@@ -38,6 +37,8 @@ public class TriosXmlFeed implements XmlParseListener {
 
     public void postXml(String xml) throws IOException {
 
+        //url = "http://192.168.1.25:60000/";
+
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(url);
         StringEntity stringEntity = new StringEntity(xml);
@@ -52,11 +53,14 @@ public class TriosXmlFeed implements XmlParseListener {
 
 
         HttpGet httpGet = new HttpGet(url);
-       
+
         httpGet.addHeader("cortex", "4");
         HttpClient httpclient = new DefaultHttpClient();
         HttpResponse response = httpclient.execute(httpGet);
         content = response.getEntity().getContent();
+
+       
+        TriosLightNames.setNames();
 
         xml = new XmlParser(content);
         xml.addXmlParseListener(this);
@@ -83,14 +87,15 @@ public class TriosXmlFeed implements XmlParseListener {
                     cortex.setHours(data.getAttributeValue(5));
                     cortex.setMasks(data.getAttributeValue(6));
                     notifyCortexChange(cortex);
-                }else if (data.getName().equals(LIGHTTAGNAME)) {
+                } else if (data.getName().equals(LIGHTTAGNAME)) {
                     light = new Light(cortex.getName(), data.getAttributeValue(0));
                     light.setValue(data.getAttributeValue(1));
                     light.setMin(data.getAttributeValue(2));
                     light.setMax(data.getAttributeValue(3));
                     light.setStep(data.getAttributeValue(4));
-                    light.setPinout(data.getAttributeValue(5));
-                    light.setPinin(data.getAttributeValue(6));
+                    light.setPinin(data.getAttributeValue(5));
+                    light.setPinout(data.getAttributeValue(6));
+                    light.setName(TriosLightNames.getName(light.getCortexId(),light.getLightId()));
                     notifyLightChange(light);
                 }
                 break;

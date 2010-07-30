@@ -1,12 +1,8 @@
 package com.android.guyvo;
 
 import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
+import android.graphics.*;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -19,10 +15,12 @@ import android.view.View;
  */
 public class SliderView extends View {
     private Paint paintRect = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint paintText = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Paint paintStroke = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private LinearGradient linearGradient;
     private boolean drawingBusy = true;
     private float initX, initY = 50;
-    private String logText="";
+    private String logText = "";
+    private boolean isEnabled = true;
 
     public SliderView(Context context) {
         super(context);
@@ -31,6 +29,7 @@ public class SliderView extends View {
 
     public SliderView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setPadding(5, 5, 5, 10);
         init();
     }
 
@@ -40,50 +39,65 @@ public class SliderView extends View {
     }
 
     private void init() {
-        paintRect.setStyle(Paint.Style.FILL);
-        paintRect.setColor(Color.BLUE );
-        paintText.setColor(Color.YELLOW);
-        paintText.setTextSize(8f);
-        //paintText.setTextAlign(Paint.Align.CENTER);
+        paintStroke.setStyle(Paint.Style.STROKE);
+        paintStroke.setStrokeWidth(1f);
+        paintStroke.setColor(Color.BLUE);
+        setFocusable(true);
+    }
+
+    @Override
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
+    }
+
+    public void setValue(int value) {
+        initX = ((10000 - value) / 10000f) * getMeasuredWidth();
+        invalidate();
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         Rect rect = new Rect(0, 0, (int) initX, (int) initY);
+        Rect stroke = new Rect(0, 0, getMeasuredWidth(), getMeasuredHeight() - getPaddingBottom());
 
         //if (drawingBusy) {
-            canvas.drawRect(rect, paintRect);
-            canvas.drawText(logText, 5f, 30f, paintText);
+        canvas.drawRect(rect, paintRect);
+        canvas.drawRect(stroke, paintStroke);
+        canvas.drawText(String.valueOf(initX), ((getMeasuredWidth() / 2)), getMeasuredHeight() / 2, paintStroke);
         //}
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec), MeasureSpec.getSize(heightMeasureSpec));
+        initY = getMeasuredHeight() - getPaddingBottom();
+        linearGradient = new LinearGradient(0f, 0f, getMeasuredWidth(), getMeasuredHeight(), Color.BLACK, Color.YELLOW, Shader.TileMode.CLAMP);
+        paintRect.setShader(linearGradient);
+        paintStroke.setTextSize(getMeasuredHeight() / 4);
+
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        if (isEnabled) {
 
-        int action = event.getAction();
-        if (action == MotionEvent.ACTION_MOVE) {
-            initX = event.getX();
-            initY = event.getY();
+            int action = event.getAction();
+            if (action == MotionEvent.ACTION_MOVE) {
+                initX = event.getX();
+            } else if (action == MotionEvent.ACTION_DOWN) {
+                initX = event.getX();
+                drawingBusy = true;
+            } else if (action == MotionEvent.ACTION_UP) {
+                drawingBusy = false;
+            }
 
-        } else if (action == MotionEvent.ACTION_DOWN) {
-            initX = event.getX();
-            initY = event.getY();
-            drawingBusy = true;
-        } else if (action == MotionEvent.ACTION_UP) {
-            drawingBusy = false;
-        }
-
-        //if (drawingBusy)
+            //if (drawingBusy)
             invalidate();
 
-        dumpEvent(event);
+            return true;
+        }
 
-        return true;
+        return false;
     }
 
     private void dumpEvent(MotionEvent event) {
@@ -107,7 +121,7 @@ public class SliderView extends View {
             sb.append(",").append((int) event.getY(i));
             if (i + 1 < event.getPointerCount())
                 sb.append(";");
-            sb.append(" press=" + Float.toString(event.getPressure(i))); 
+            sb.append(" press=" + Float.toString(event.getPressure(i)));
         }
         sb.append("]");
         logText = sb.toString();
