@@ -1,17 +1,15 @@
 package com.android.guyvo;
 
 import android.app.ListActivity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
-import android.widget.Gallery;
-
-import static com.android.guyvo.MainActivity.triosModel;
 
 import java.util.ArrayList;
+
+import static com.android.guyvo.MainActivity.triosModel;
 
 /**
  * Created by IntelliJ IDEA.
@@ -20,13 +18,13 @@ import java.util.ArrayList;
  * Time: 7:40:59 PM
  * To change this template use File | Settings | File Templates.
  */
-public class CortexList extends ListActivity{
+public class CortexList extends ListActivity {
     ArrayList<String> items = new ArrayList<String>();
     ArrayAdapter<String> arrayAdapter;
 
-    private void getItems (){
+    private void getItems() {
         items.clear();
-        for ( int i = 0; i < triosModel.getListLights().size() ; i++){
+        for (int i = 0; i < triosModel.getListLights().size(); i++) {
             items.add(triosModel.getListLights().get(i).getValue());
         }
         arrayAdapter.notifyDataSetChanged();

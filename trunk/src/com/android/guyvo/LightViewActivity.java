@@ -2,10 +2,10 @@ package com.android.guyvo;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.*;
 import android.widget.*;
 
@@ -18,13 +18,15 @@ import static com.android.guyvo.MainActivity.triosModel;
  * Time: 7:22:00 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LightViewActivity extends Activity implements AdapterView.OnItemClickListener{
+public class LightViewActivity extends Activity implements AdapterView.OnItemClickListener {
 
     LightAdapter lightAdapter;
     CortexAdapter cortexAdapter;
 
     Gallery galleryLights;
     Gallery galleryCortexes;
+
+    SliderView sliderView;
 
     private void getItems() {
     }
@@ -35,6 +37,8 @@ public class LightViewActivity extends Activity implements AdapterView.OnItemCli
         setContentView(R.layout.horizontal_lights);
         galleryLights = (Gallery) findViewById(R.id.gallery1);
         galleryCortexes = (Gallery) findViewById(R.id.gallery2);
+        sliderView = (SliderView) findViewById(R.id.slider);
+        sliderView.setEnabled(true);
         lightAdapter = new LightAdapter(this);
         cortexAdapter = new CortexAdapter(this);
         galleryLights.setAdapter(lightAdapter);
@@ -56,17 +60,21 @@ public class LightViewActivity extends Activity implements AdapterView.OnItemCli
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.listlights, menu);
+        MenuItem menuItem = menu.getItem(1);
+        menuItem.setIntent(new Intent(this, TriosXmlTextView.class));
+        
         return true;
     }
 
 
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Light light;
-        light = (Light)lightAdapter.getItem(i);
-        Toast.makeText(this,light.getValue(),Toast.LENGTH_SHORT).show();
+        light = (Light) lightAdapter.getItem(i);
+        Toast.makeText(this, light.getValue(), Toast.LENGTH_SHORT).show();
+        sliderView.setValue(Integer.valueOf(light.getValue()));
     }
 
-    public class LightAdapter extends BaseAdapter implements View.OnFocusChangeListener{
+    public class LightAdapter extends BaseAdapter implements View.OnFocusChangeListener {
         private Context context;
         private int itemBackground;
 
@@ -96,7 +104,7 @@ public class LightViewActivity extends Activity implements AdapterView.OnItemCli
             TextView textView = new TextView(context);
 
             if (convertView == null) {
-                textView.setTextSize(8);
+                textView.setTextSize(10);
                 textView.setText("Value : " + triosModel.getListLights().get(position).getValue());
                 textView.setLayoutParams(new Gallery.LayoutParams(80, 80));
                 textView.setTextColor(0xFFFF0000);
@@ -119,7 +127,7 @@ public class LightViewActivity extends Activity implements AdapterView.OnItemCli
         }
     }
 
-    public class CortexAdapter extends BaseAdapter implements View.OnFocusChangeListener{
+    public class CortexAdapter extends BaseAdapter implements View.OnFocusChangeListener {
         private Context context;
         private int itemBackground;
 
@@ -151,8 +159,8 @@ public class LightViewActivity extends Activity implements AdapterView.OnItemCli
             if (convertView == null) {
                 TextView textView = new TextView(context);
                 TextView textView2 = new TextView(context);
-                textView.setTextSize(8);
-                textView2.setTextSize(8);
+                textView.setTextSize(10);
+                textView2.setTextSize(10);
                 textView.setTextColor(Color.YELLOW);
                 textView2.setTextColor(Color.YELLOW);
                 textView.setText("Temp : " + triosModel.getListCortexes().get(position).getSensor());

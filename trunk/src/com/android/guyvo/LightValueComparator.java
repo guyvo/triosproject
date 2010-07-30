@@ -11,6 +11,6 @@ import java.util.Comparator;
  */
 public class LightValueComparator implements Comparator<Light> {
     public int compare(Light light, Light light1) {
-         return ( Integer.valueOf(light.getValue()).compareTo(Integer.valueOf(light1.getValue())));
+        return (Integer.valueOf(light.getValue()).compareTo(Integer.valueOf(light1.getValue())));
     }
 }

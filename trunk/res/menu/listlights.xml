@@ -2,4 +2,5 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/sortonvalue" android:titleCondensed="Sort on value" android:icon="@drawable/icon48"/>
+    <item android:id="@+id/xmlstring" android:titleCondensed="View as xml" android:icon="@drawable/icon48"/>
 </menu>
