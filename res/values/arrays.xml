@@ -1,0 +1,13 @@
+<resources>
+    <string-array name="lightstrength">
+        <item>OFF</item>
+        <item>MIN</item>
+        <item>LOW</item>
+        <item>MEDIUM</item>
+        <item>MAX</item>
+        <item>ON</item>
+    </string-array>
+</resources>
+
+
+
