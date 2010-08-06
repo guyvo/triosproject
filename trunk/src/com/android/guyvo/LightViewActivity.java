@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.*;
 import android.widget.*;
 
@@ -110,7 +111,7 @@ public class LightViewActivity extends Activity implements AdapterView.OnItemCli
                 textView.setTextColor(0xFFFF0000);
                 textView.setBackgroundColor(0xFF202050);
                 textView.setOnFocusChangeListener(this);
-
+                Log.d("LightViewActivity","Galerry adapter view null");
 
                 //textView.setBackgroundResource(itemBackground);
             } else {

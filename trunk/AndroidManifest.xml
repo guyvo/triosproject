@@ -14,6 +14,7 @@
         <activity android:name=".SliderTest"/>
         <activity android:name=".TriosXmlTextView"/>
         <activity android:name=".TriosListPrograms"/>
+        <activity android:name=".TriosMakeProgram" android:windowSoftInputMode="adjustPan"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

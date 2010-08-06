@@ -3,8 +3,12 @@ package com.android.guyvo;
 import android.content.Context;
 import android.graphics.*;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
+import java.util.EventListener;
+import java.util.Vector;
 
 /**
  * Created by IntelliJ IDEA.
@@ -13,36 +17,95 @@ import android.view.View;
  * Time: 8:02:13 PM
  * To change this template use File | Settings | File Templates.
  */
-public class SliderView extends View {
-    private Paint paintRect = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint paintStroke = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private LinearGradient linearGradient;
-    private boolean drawingBusy = true;
-    private float initX, initY = 50;
-    private String logText = "";
+public class SliderView extends View implements View.OnClickListener {
+
+    private Paint mPaintRect = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Paint mPaintStroke = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private LinearGradient mLinearGradient;
+    private boolean mDrawingBusy = true;
+    private float mTheX;
+    private float mTheY;
+    private int mValue;
+    private int mPosition;
     private boolean isEnabled = true;
+
+    private Vector<SliderViewListner> sliderViewListners = new Vector<SliderViewListner>();
+
+    public interface SliderViewListner extends EventListener{
+         public abstract void onSliderValueChanged(int value,int position);
+    }
+
+    public void addSliderViewListner(SliderViewListner sliderViewListner){
+        sliderViewListners.addElement(sliderViewListner);
+    }
+
+    public void removeliderViewListner(SliderViewListner sliderViewListner){
+        sliderViewListners.remove(sliderViewListner);
+    }
+
+    public void onClick(View view) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 
     public SliderView(Context context) {
         super(context);
+        setPadding(5, 5, 5, 5);
+        setOnClickListener(this);
         init();
     }
 
     public SliderView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setPadding(5, 5, 5, 10);
+        setPadding(5, 5, 5, 5);
+        setOnClickListener(this);
         init();
     }
 
     public SliderView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        setPadding(5, 5, 5, 5);
+        setOnClickListener(this);
         init();
     }
 
     private void init() {
-        paintStroke.setStyle(Paint.Style.STROKE);
-        paintStroke.setStrokeWidth(1f);
-        paintStroke.setColor(Color.BLUE);
+        mPaintStroke.setStyle(Paint.Style.STROKE);
+        mPaintStroke.setStrokeWidth(.5f);
+        mPaintStroke.setColor(Color.RED);
         setFocusable(true);
+        setClickable(true);
+    }
+
+
+    private void convertToView(int value) {
+        mTheX = (value / 100f) * getWidth();
+    }
+
+    private int convertToValue() {
+        return (int) ((mTheX / getWidth()) * 100);
+    }
+
+    public void setValue(int x) {
+        mValue = x;
+    }
+
+    public void setValue(int x , int position) {
+        mValue = x;
+        mPosition = position;
+    }
+
+    public void setPosition (int position){
+        mPosition = position;        
+    }
+
+    public int getValue() {
+        return convertToValue();
+    }
+
+    public void notifyValueChanged (){
+        for (int i=0;i<sliderViewListners.size();i++){
+            sliderViewListners.get(i).onSliderValueChanged(getValue(),mPosition);
+        }
     }
 
     @Override
@@ -50,49 +113,46 @@ public class SliderView extends View {
         isEnabled = enabled;
     }
 
-    public void setValue(int value) {
-        initX = ((10000 - value) / 10000f) * getMeasuredWidth();
-        invalidate();
-    }
-
     @Override
     protected void onDraw(Canvas canvas) {
-        Rect rect = new Rect(0, 0, (int) initX, (int) initY);
-        Rect stroke = new Rect(0, 0, getMeasuredWidth(), getMeasuredHeight() - getPaddingBottom());
+        convertToView(mValue);
+        Rect rect = new Rect(0, 0, (int) mTheX, (int) mTheY);
+        Rect stroke = new Rect(0, 0, getWidth(), getHeight() - getPaddingBottom());
 
-        //if (drawingBusy) {
-        canvas.drawRect(rect, paintRect);
-        canvas.drawRect(stroke, paintStroke);
-        canvas.drawText(String.valueOf(initX), ((getMeasuredWidth() / 2)), getMeasuredHeight() / 2, paintStroke);
+        //if (mDrawingBusy) {
+            canvas.drawRect(rect, mPaintRect);
+            canvas.drawRect(stroke, mPaintStroke);
+            canvas.drawText(String.valueOf(mValue), ((getWidth() / 2)), getHeight() / 2, mPaintStroke);
         //}
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec), MeasureSpec.getSize(heightMeasureSpec));
-        initY = getMeasuredHeight() - getPaddingBottom();
-        linearGradient = new LinearGradient(0f, 0f, getMeasuredWidth(), getMeasuredHeight(), Color.BLACK, Color.YELLOW, Shader.TileMode.CLAMP);
-        paintRect.setShader(linearGradient);
-        paintStroke.setTextSize(getMeasuredHeight() / 4);
-
+        mTheY = getMeasuredHeight() - getPaddingBottom();
+        mLinearGradient = new LinearGradient(0f, 0f, getMeasuredWidth(), getMeasuredHeight(), Color.BLACK, Color.YELLOW, Shader.TileMode.CLAMP);
+        mPaintRect.setShader(mLinearGradient);
+        mPaintStroke.setTextSize(getMeasuredHeight() / 4);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (isEnabled) {
-
             int action = event.getAction();
             if (action == MotionEvent.ACTION_MOVE) {
-                initX = event.getX();
+                mTheX = (int) event.getX();
             } else if (action == MotionEvent.ACTION_DOWN) {
-                initX = event.getX();
-                drawingBusy = true;
+                mTheX = (int) event.getX();
+                mDrawingBusy = true;
             } else if (action == MotionEvent.ACTION_UP) {
-                drawingBusy = false;
+                mDrawingBusy = false;
             }
 
-            //if (drawingBusy)
-            invalidate();
+            mValue = convertToValue();
+
+            if (mDrawingBusy) invalidate();
+
+            notifyValueChanged();
 
             return true;
         }
@@ -124,8 +184,6 @@ public class SliderView extends View {
             sb.append(" press=" + Float.toString(event.getPressure(i)));
         }
         sb.append("]");
-        logText = sb.toString();
-        //Log.d(TAG, sb.toString());
-
+        Log.d("dumpEvent", sb.toString());
     }
 }
