@@ -11,9 +11,11 @@
     <TextView
         android:id="@+id/LIGHT_NAME"
         android:layout_width="fill_parent"
-        android:layout_height="50dip"
-        android:layout_weight="1"
+        android:layout_height="45dip"
+        android:layout_weight="2"
         android:clickable="true"
+        android:paddingBottom="5dip"
+        android:paddingRight="5dip"
     />
     <com.android.guyvo.SliderView
         android:id="@+id/LIGHT_SLIDER"

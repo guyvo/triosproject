@@ -17,7 +17,7 @@ import java.util.Vector;
  * Time: 8:02:13 PM
  * To change this template use File | Settings | File Templates.
  */
-public class SliderView extends View implements View.OnClickListener {
+public class SliderView extends View {
 
     private Paint mPaintRect = new Paint(Paint.ANTI_ALIAS_FLAG);
     private Paint mPaintStroke = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -31,51 +31,41 @@ public class SliderView extends View implements View.OnClickListener {
 
     private Vector<SliderViewListner> sliderViewListners = new Vector<SliderViewListner>();
 
-    public interface SliderViewListner extends EventListener{
-         public abstract void onSliderValueChanged(int value,int position);
+    public interface SliderViewListner extends EventListener {
+        public abstract void onSliderValueChanged(int value, int position);
     }
 
-    public void addSliderViewListner(SliderViewListner sliderViewListner){
+    public void addSliderViewListner(SliderViewListner sliderViewListner) {
         sliderViewListners.addElement(sliderViewListner);
     }
 
-    public void removeliderViewListner(SliderViewListner sliderViewListner){
+    public void removeliderViewListner(SliderViewListner sliderViewListner) {
         sliderViewListners.remove(sliderViewListner);
-    }
-
-    public void onClick(View view) {
-        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     public SliderView(Context context) {
         super(context);
         setPadding(5, 5, 5, 5);
-        setOnClickListener(this);
         init();
     }
 
     public SliderView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPadding(5, 5, 5, 5);
-        setOnClickListener(this);
         init();
     }
 
     public SliderView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPadding(5, 5, 5, 5);
-        setOnClickListener(this);
         init();
     }
 
     private void init() {
         mPaintStroke.setStyle(Paint.Style.STROKE);
-        mPaintStroke.setStrokeWidth(.5f);
-        mPaintStroke.setColor(Color.RED);
-        setFocusable(true);
-        setClickable(true);
+        mPaintStroke.setStrokeWidth(1f);
+        mPaintStroke.setColor(0xFFAA3040);
     }
-
 
     private void convertToView(int value) {
         mTheX = (value / 100f) * getWidth();
@@ -89,22 +79,22 @@ public class SliderView extends View implements View.OnClickListener {
         mValue = x;
     }
 
-    public void setValue(int x , int position) {
+    public void setValue(int x, int position) {
         mValue = x;
         mPosition = position;
     }
 
-    public void setPosition (int position){
-        mPosition = position;        
+    public void setPosition(int position) {
+        mPosition = position;
     }
 
     public int getValue() {
         return convertToValue();
     }
 
-    public void notifyValueChanged (){
-        for (int i=0;i<sliderViewListners.size();i++){
-            sliderViewListners.get(i).onSliderValueChanged(getValue(),mPosition);
+    public void notifyValueChanged() {
+        for (int i = 0; i < sliderViewListners.size(); i++) {
+            sliderViewListners.get(i).onSliderValueChanged(getValue(), mPosition);
         }
     }
 
@@ -118,12 +108,9 @@ public class SliderView extends View implements View.OnClickListener {
         convertToView(mValue);
         Rect rect = new Rect(0, 0, (int) mTheX, (int) mTheY);
         Rect stroke = new Rect(0, 0, getWidth(), getHeight() - getPaddingBottom());
-
-        //if (mDrawingBusy) {
-            canvas.drawRect(rect, mPaintRect);
-            canvas.drawRect(stroke, mPaintStroke);
-            canvas.drawText(String.valueOf(mValue), ((getWidth() / 2)), getHeight() / 2, mPaintStroke);
-        //}
+        canvas.drawRect(rect, mPaintRect);
+        canvas.drawRect(stroke, mPaintStroke);
+        canvas.drawText(String.valueOf(mValue), ((getWidth() / 2)), getHeight() / 2, mPaintStroke);
     }
 
     @Override
@@ -143,14 +130,12 @@ public class SliderView extends View implements View.OnClickListener {
                 mTheX = (int) event.getX();
             } else if (action == MotionEvent.ACTION_DOWN) {
                 mTheX = (int) event.getX();
-                mDrawingBusy = true;
             } else if (action == MotionEvent.ACTION_UP) {
-                mDrawingBusy = false;
             }
 
             mValue = convertToValue();
 
-            if (mDrawingBusy) invalidate();
+            invalidate();
 
             notifyValueChanged();
 

@@ -19,9 +19,12 @@ public class Cortex {
     private String hours;
     private String masks;
 
-    private StringBuilder xml = new  StringBuilder();
 
     public String toXml(){
+
+        // ensure we have an empty builder every time we want to convert
+        StringBuilder xml = new  StringBuilder();
+
         xml.append("<Cortex CORTEX=\"");
         xml.append(name + "\"");
         xml.append(" SENSOR=\"");
