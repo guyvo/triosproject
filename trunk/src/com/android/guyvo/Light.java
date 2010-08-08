@@ -8,6 +8,11 @@ package com.android.guyvo;
  * To change this template use File | Settings | File Templates.
  */
 public class Light {
+
+    private final String OFF = "10000";
+    private final String ON  = "0";
+    private final int TIME = 10000;
+
     private String name;
     private String cortexId;
     private String lightId;
@@ -19,10 +24,13 @@ public class Light {
     private String pinout;
     private String step;
 
-    private StringBuilder xml = new  StringBuilder();
+
 
 
     public String toXml(){
+        // ensure we have an empty builder every time we want to convert
+        StringBuilder xml = new  StringBuilder();
+
         xml.append("<Light NAME=\"");
         xml.append(lightId + "\"");
         xml.append(" VALUE=\"");
@@ -70,8 +78,26 @@ public class Light {
         return value;
     }
 
+    public int getViewValue() {
+        return (10000 - Integer.parseInt(value))/100;
+    }
+
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public void setValue(int value) {
+        int v;
+        v = TIME - (TIME * value) / 100;
+
+        if ( v > Integer.parseInt(min)){
+            setValue(OFF);
+        }
+        else if ( v < Integer.parseInt(max)){
+            setValue(ON);
+        }
+        else
+            setValue(String.valueOf(v));
     }
 
     public String getMin() {

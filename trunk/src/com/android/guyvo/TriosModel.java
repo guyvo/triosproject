@@ -9,7 +9,7 @@ import java.util.*;
  * Time: 7:10:15 PM
  * To change this template use File | Settings | File Templates.
  */
-public class TriosModel implements TriosLightChangeListener, TriosCortexChangeListener {
+public class TriosModel implements TriosLightChangeListener, TriosCortexChangeListener , SliderView.SliderViewListner{
 
     private List<Light> listLights;
     private List<Cortex> listCortexes;
@@ -17,8 +17,6 @@ public class TriosModel implements TriosLightChangeListener, TriosCortexChangeLi
     private Comparator<Cortex> nameCompare = new CortexNameComparator();
     private Comparator<Light> valueComparator = new LightValueComparator();
     private Comparator<Light> nameComparator = new LightNameComparator();
-
-    private StringBuilder xml = new StringBuilder();
 
     public TriosModel() {
         listLights = new ArrayList<Light>();
@@ -106,14 +104,20 @@ public class TriosModel implements TriosLightChangeListener, TriosCortexChangeLi
         }
     }
 
+    public void onSliderValueChanged(int value, int position) {
+        getListLights().get(position).setValue(value);
+    }
+
     public String toXml (){
+
+         // ensure we have an empty builder every time we want to convert
+        StringBuilder xml = new StringBuilder();
+
         Iterator cortexIterator = listCortexes.iterator();
         Iterator lightIterator = listLights.listIterator();
 
         sortOnCortexName();
         sortOnLightName();
-
-        listLights.get(0).setValue("5000");
 
         xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
         xml.append("<DATA>\n");
@@ -137,4 +141,5 @@ public class TriosModel implements TriosLightChangeListener, TriosCortexChangeLi
 
         return xml.toString();
     }
+
 }
