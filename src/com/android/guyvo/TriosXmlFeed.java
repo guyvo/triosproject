@@ -37,8 +37,6 @@ public class TriosXmlFeed implements XmlParseListener {
 
     public void postXml(String xml) throws IOException {
 
-        //url = "http://192.168.1.25:60000/";
-
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(url);
         StringEntity stringEntity = new StringEntity(xml);
@@ -51,20 +49,23 @@ public class TriosXmlFeed implements XmlParseListener {
     public void getXml() throws Exception {
         InputStream content = null;
 
+        try{
+            HttpGet httpGet = new HttpGet(url);
 
-        HttpGet httpGet = new HttpGet(url);
+            httpGet.addHeader("cortex", "4");
+            HttpClient httpclient = new DefaultHttpClient();
+            HttpResponse response = httpclient.execute(httpGet);
+            content = response.getEntity().getContent();
 
-        httpGet.addHeader("cortex", "4");
-        HttpClient httpclient = new DefaultHttpClient();
-        HttpResponse response = httpclient.execute(httpGet);
-        content = response.getEntity().getContent();
+            TriosLightNames.setNames();
 
-       
-        TriosLightNames.setNames();
-
-        xml = new XmlParser(content);
-        xml.addXmlParseListener(this);
-        xml.Parse();
+            xml = new XmlParser(content);
+            xml.addXmlParseListener(this);
+            xml.Parse();
+        }
+        finally {
+            if ( ! (content == null)) content.close();
+        }
     }
 
     public TriosXmlFeed(String url) throws IOException {
