@@ -18,30 +18,31 @@ public final class R {
         public static final int icon48=0x7f020001;
     }
     public static final class id {
-        public static final int LIGHT_NAME=0x7f07000b;
-        public static final int LIGHT_SLIDER=0x7f07000c;
-        public static final int LIST_NAMES=0x7f07000a;
-        public static final int Programs=0x7f070015;
+        public static final int LIGHT_NAME=0x7f07000c;
+        public static final int LIGHT_SLIDER=0x7f07000d;
+        public static final int LIST_NAMES=0x7f07000b;
+        public static final int Programs=0x7f070016;
         public static final int dimmerval=0x7f070007;
         public static final int gallery1=0x7f070000;
         public static final int gallery2=0x7f070001;
-        public static final int ipadress=0x7f07000e;
-        public static final int list_cortex=0x7f070013;
-        public static final int list_lights=0x7f070012;
-        public static final int programs=0x7f070016;
+        public static final int getxml=0x7f07000a;
+        public static final int ipadress=0x7f07000f;
+        public static final int list_cortex=0x7f070014;
+        public static final int list_lights=0x7f070013;
+        public static final int programs=0x7f070017;
         public static final int sensorval=0x7f070006;
-        public static final int setup=0x7f070014;
+        public static final int setup=0x7f070015;
         public static final int slider=0x7f070002;
         public static final int slider2=0x7f070003;
         public static final int slider3=0x7f070004;
         public static final int slider4=0x7f070005;
-        public static final int sortonvalue=0x7f070010;
-        public static final int spinner=0x7f07000d;
+        public static final int sortonvalue=0x7f070011;
+        public static final int spinner=0x7f07000e;
         public static final int text=0x7f070008;
         public static final int urlname=0x7f070009;
-        public static final int xmlpost=0x7f070017;
-        public static final int xmlstring=0x7f070011;
-        public static final int xmltext=0x7f07000f;
+        public static final int xmlpost=0x7f070018;
+        public static final int xmlstring=0x7f070012;
+        public static final int xmltext=0x7f070010;
     }
     public static final class layout {
         public static final int cortexlist=0x7f030000;
@@ -64,6 +65,7 @@ public final class R {
         public static final int CORTEX=0x7f050004;
         public static final int DIMMER=0x7f050008;
         public static final int MASK=0x7f050009;
+        public static final int Notification=0x7f05000a;
         public static final int SENSOR=0x7f050005;
         public static final int TOGGLE=0x7f050007;
         public static final int WATCHDOG=0x7f050006;
