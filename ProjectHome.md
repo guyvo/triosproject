@@ -1,0 +1,1 @@
+first tryout in adroid to target HTC desire
